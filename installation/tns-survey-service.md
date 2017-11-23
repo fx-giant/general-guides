@@ -11,11 +11,11 @@ These instructions will assist on getting the docker image startup
 
 ### Installation (Docker)
 ```bash
-sudo docker run -p 8810:3000 -d \
+sudo docker run -p {{port-number-use-80}}:3000 -d \
     --name survey-node \
     -e SURVEY_MONGODB_URL=mongodb://username:password@url:27017/Survey?authSource=admin \
     asia.gcr.io/fx-giant-container/tns-surveyservice-node:1.0
 
 # To validate provided configurations is correctly being applied
-curl localhost:8810/api/configuration
+curl localhost:{{port-number-use-80}}/api/configuration
 ```
